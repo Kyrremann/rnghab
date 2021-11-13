@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RNG Hand and brain chess</title>
+    <meta name="description" content="A fun rng hand and chess game">
+    <meta name="author" content="Kyrremann">
+
+    <meta property="og:title" content="A fun rng hand and chess game">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kyrremann.no/rng-hand-and-brain/">
+    <meta property="og:description" content="A fun rng hand and chess game">
+    <!--meta property="og:image" content="image.png"-->
+
+    <!--link rel="icon" href="/favicon.ico"-->
+    <!--link rel="icon" href="/favicon.svg" type="image/svg+xml"-->
+    <!--link rel="apple-touch-icon" href="/apple-touch-icon.png"-->
+
+    <link rel="stylesheet" href="css/chessboard-1.0.0.css?v=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+            crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+            integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+            crossorigin="anonymous"></script>
+
+    <script src="js/chess-0.12.min.js"></script>
+
+  </head>
+
+  <body>
+    <div id="myBoard" style="width: 400px"></div>
+    <button id="kingBtn" value="king">King</button>
+    <button id="queenBtn" value="queen">Queen</button>
+    <button id="rookBtn" value="rook">Rook</button>
+    <button id="bishopBtn" value="bishop">Bishop</button>
+    <button id="knightBtn" value="knight">Knight</button>
+    <button id="pawnBtn" value="pawn">Pawn</button>
+
+    <br />
+    <label>Status:</label>
+    <div id="status"></div>
+    <label>FEN:</label>
+    <div id="fen"></div>
+    <label>PGN:</label>
+    <div id="pgn"></div>
+    <label>Moves:</label>
+    <div id="moves"></div>
+    <script src="js/game.js"></script>
+  </body>
+</html>
