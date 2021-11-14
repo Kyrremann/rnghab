@@ -1,4 +1,3 @@
-
 var board = null
 var game = new Chess()
 var $status = $('#status')
@@ -48,7 +47,6 @@ function move(event) {
   var randomIdx = Math.floor(Math.random() * possibleMoves.length)
   game.move(possibleMoves[randomIdx])
   board.position(game.fen())
-  updateStatus()
 }
 
 function updateStatus () {
@@ -85,8 +83,13 @@ function updateStatus () {
   $moves.html(game.moves().join(', '))
 }
 
+function onMoveEnd(oldPos, newPos) {
+  updateStatus()
+}
+
 var config = {
   draggable: false,
+  onMoveEnd: onMoveEnd,
   position: 'start'
 }
 board = Chessboard('myBoard', config)
