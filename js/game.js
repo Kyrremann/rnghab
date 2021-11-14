@@ -41,7 +41,7 @@ function move(event) {
     possibleMoves = getMoves(/^\+?Nx?\w\d$/)
     break
   case 'pawn':
-    possibleMoves = getMoves(/^([a-h]x)?[a-h]\d$/)
+    possibleMoves = getMoves(/^([a-h]x)?[a-h]\d(=[QRBN]\+?)?$/)
     break
   }
   
